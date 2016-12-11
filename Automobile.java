@@ -24,7 +24,7 @@ public class Automobile
       }
       if (comando.equals("A"))
       {
-         Automobile.accellera(velocita);
+         Automobile.accelera(velocita);
       }
       else if (comando.equals("F"))
       {
@@ -36,14 +36,12 @@ public class Automobile
       }
      }
    }
-   public static void accellera (int velocita2)
+   public static void accelera (int velocita2)
    {
-        velocita2=velocita;
-        velocita+=5;
-        velocita=velocita2;   
+        velocita+=5; 
         if (velocita>=90)
         {
-           System.out.println ("Attenzione, stai andando troppo veloce!");
+           System.out.print("Attenzione, stai andando troppo veloce! ");
            System.out.println("La tua velocità ora è "+velocita+" km/h.");
         }
         else
@@ -53,7 +51,6 @@ public class Automobile
    }
    public static void frena (int velocita2)
    {
-       velocita2=velocita; 
        if (velocita==0)
         {
             System.out.println ("Non puoi frenare da fermo!");
@@ -61,7 +58,6 @@ public class Automobile
         else if (velocita>0)
         {
             velocita-=10;
-            velocita=velocita2;
             System.out.println ("La tua velocità ora è "+velocita+" km/h.");
         }
         else
